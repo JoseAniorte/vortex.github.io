@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda de Camisetas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">👕 MiTiendaCamisetas</div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección de bienvenida -->
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a Mi Tienda de Camisetas</h1>
+    <p>Las mejores camisetas con los mejores diseños</p>
+    <a href="#productos" class="btn">Ver Productos</a>
+  </section>
+
+  <!-- Sección de productos -->
+  <section id="productos" class="productos">
+    <h2>Nuestras Camisetas</h2>
+    <div class="grid-productos">
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x300?text=Camiseta+1" alt="Camiseta 1">
+        <h3>Camiseta Diseño 1</h3>
+        <p>€19.99</p>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x300?text=Camiseta+2" alt="Camiseta 2">
+        <h3>Camiseta Diseño 2</h3>
+        <p>€24.99</p>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x300?text=Camiseta+3" alt="Camiseta 3">
+        <h3>Camiseta Diseño 3</h3>
+        <p>€21.99</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MiTiendaCamisetas. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
