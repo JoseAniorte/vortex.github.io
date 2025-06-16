@@ -1,70 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tienda de Camisetas</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Camisetas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Encabezado -->
-  <header>
-    <div class="logo">👕 MiTiendaCamisetas</div>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo">Vortex</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#carrito" class="cart-link">Carrito (<span id="cart-count">0</span>)</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- Sección de bienvenida -->
-  <section id="inicio" class="hero">
-    <h1>Bienvenido a Mi Tienda de Camisetas</h1>
-    <p>Las mejores camisetas con los mejores diseños</p>
-    <a href="#productos" class="btn">Ver Productos</a>
-  </section>
+    <!-- Sección de Bienvenida -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>¡Bienvenido a Mi Tienda de Camisetas!</h1>
+            <p>Disfruta de las mejores camisetas con los mejores diseños.</p>
+            <a href="#productos" class="btn">Ver Productos</a>
+        </div>
+    </section>
 
-  <!-- Sección de productos -->
-  <section id="productos" class="productos">
-    <h2>Nuestras Camisetas</h2>
-    <div class="grid-productos">
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x300?text=Camiseta+1" alt="Camiseta 1">
-        <h3>Camiseta Diseño 1</h3>
-        <p>€19.99</p>
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x300?text=Camiseta+2" alt="Camiseta 2">
-        <h3>Camiseta Diseño 2</h3>
-        <p>€24.99</p>
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x300?text=Camiseta+3" alt="Camiseta 3">
-        <h3>Camiseta Diseño 3</h3>
-        <p>€21.99</p>
-      </div>
-    </div>
-  </section>
+    <!-- Sección de Productos -->
+    <section id="productos" class="section">
+        <h2>Nuestras Camisetas</h2>
+        <div class="product-grid">
+            <div class="product-card" data-id="1" data-name="Camiseta Diseño 1" data-price="19.99">
+                <img src="https://via.placeholder.com/250x250?text=Camiseta+1" alt="Camiseta 1">
+                <h3>Camiseta Diseño 1</h3>
+                <p class="price">$19.99</p>
+                <button class="btn add-to-cart">Añadir al Carrito</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Camiseta Diseño 2" data-price="24.99">
+                <img src="https://via.placeholder.com/250x250?text=Camiseta+2" alt="Camiseta 2">
+                <h3>Camiseta Diseño 2</h3>
+                <p class="price">$24.99</p>
+                <button class="btn add-to-cart">Añadir al Carrito</button>
+            </div>
+            <div class="product-card" data-id="3" data-name="Camiseta Diseño 3" data-price="29.99">
+                <img src="https://via.placeholder.com/250x250?text=Camiseta+3" alt="Camiseta 3">
+                <h3>Camiseta Diseño 3</h3>
+                <p class="price">$29.99</p>
+                <button class="btn add-to-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+    </section>
 
-  <!-- Sección de contacto -->
-  <section id="contacto" class="contacto">
-    <h2>Contáctanos</h2>
-    <form>
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo" required>
-      <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section contact">
+        <h2>Contáctanos</h2>
+        <form id="contact-form" class="contact-form">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 MiTiendaCamisetas. Todos los derechos reservados.</p>
-  </footer>
+    <!-- Sección de Carrito -->
+    <section id="carrito" class="section">
+        <h2>Tu Carrito</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total">Total: $0.00</p>
+        <button id="clear-cart" class="btn">Vaciar Carrito</button>
+    </section>
 
+    <!-- Pie de Página -->
+    <footer>
+        <p>© 2025 Vortex. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
