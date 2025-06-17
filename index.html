@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Camisetas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Vortex | Tienda de Camisetas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Vortex - Tienda online de camisetas con los mejores diseños. Compra ahora tus camisetas favoritas.">
 </head>
 <body>
     <!-- Navegación -->
-    <nav class="navbar">
-        <div class="logo">Vortex</div>
-        <ul class="nav-links">
+     <nav class="navbar">
+         <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">&#9776;</div>
+         <div class="logo">Vortex</div>
+           <a href="#carrito" class="cart-link" id="cart-link">
+             <span class="cart-icon">🛒</span>
+             <span id="cart-count">0</span>
+          </a>
+         <div class="dropdown-menu" id="dropdown-menu">
+         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#carrito" class="cart-link">Carrito (<span id="cart-count">0</span>)</a></li>
-        </ul>
-    </nav>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+         </ul>
+        </div>
+     </nav>
 
     <!-- Sección de Bienvenida -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>¡Bienvenido a Mi Tienda de Camisetas!</h1>
+            <h1>¡Bienvenido a Vortex!</h1>
             <p>Disfruta de las mejores camisetas con los mejores diseños.</p>
             <a href="#productos" class="btn">Ver Productos</a>
         </div>
@@ -31,37 +39,45 @@
     <section id="productos" class="section">
         <h2>Nuestras Camisetas</h2>
         <div class="product-grid">
-            <div class="product-card" data-id="1" data-name="Camiseta Diseño 1" data-price="19.99">
-                <img src="https://via.placeholder.com/250x250?text=Camiseta+1" alt="Camiseta 1">
-                <h3>Camiseta Diseño 1</h3>
-                <p class="price">$19.99</p>
+            <div class="product-card" data-id="4" data-name="Camiseta Negra Vortex" data-price="21.99">
+                <img src="img/camiseta-vortex-negra.jpg" alt="Camiseta Negra Vortex">
+                <h3>Camiseta Negra Vortex</h3>
+                <p class="price">14,99€</p>
                 <button class="btn add-to-cart">Añadir al Carrito</button>
             </div>
             <div class="product-card" data-id="2" data-name="Camiseta Diseño 2" data-price="24.99">
-                <img src="https://via.placeholder.com/250x250?text=Camiseta+2" alt="Camiseta 2">
-                <h3>Camiseta Diseño 2</h3>
-                <p class="price">$24.99</p>
+                <img src="img/camiseta-vortex-blanco.jpg" alt="Camiseta Diseño 2 - Vortex">
+                <h3>Camiseta blanca Vortex</h3>
+                <p class="price">14,99€</p>
                 <button class="btn add-to-cart">Añadir al Carrito</button>
             </div>
             <div class="product-card" data-id="3" data-name="Camiseta Diseño 3" data-price="29.99">
-                <img src="https://via.placeholder.com/250x250?text=Camiseta+3" alt="Camiseta 3">
-                <h3>Camiseta Diseño 3</h3>
-                <p class="price">$29.99</p>
+                <img src="img/camiseta-vestir.jpg" alt="Camiseta Diseño 3 - Vortex">
+                <h3>Camiseta Vestir</h3>
+                <p class="price">14,99€</p>
                 <button class="btn add-to-cart">Añadir al Carrito</button>
-            </div>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
+    <!-- Sección de Contacto 
     <section id="contacto" class="section contact">
         <h2>Contáctanos</h2>
-        <form id="contact-form" class="contact-form">
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+        <form id="contact-form" class="contact-form" autocomplete="off">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="nombre" placeholder="Tu nombre" required>
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo" required>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="mensaje" placeholder="Tu mensaje" required></textarea>
             <button type="submit" class="btn">Enviar</button>
         </form>
-    </section>
+    </section> -->
+
+    <!-- Sección Sobre Nosotros 
+    <section id="sobrenosotros" class="section">
+       <h2>Sobre Nosotros</h2>
+          <p>Vortex es una tienda de camisetas con diseños originales, calidad garantizada y atención personalizada. Nuestro objetivo es que vistas con estilo y comodidad.</p>
+    </section> -->
 
     <!-- Sección de Carrito -->
     <section id="carrito" class="section">
@@ -71,10 +87,53 @@
         <button id="clear-cart" class="btn">Vaciar Carrito</button>
     </section>
 
+    <!-- Chatbot flotante -->
+    <div class="chatbot-container">
+        <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Abrir chatbot">💬</button>
+        <div id="chatbot" class="chatbot" style="display:none;">
+            <div class="chatbot-header">
+                <span>Vortex Chat</span>
+                <button id="chatbot-close" aria-label="Cerrar chatbot">&times;</button>
+            </div>
+            <div id="chatbot-messages" class="chatbot-messages" aria-live="polite"></div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." autocomplete="off">
+                <button id="chatbot-send">Enviar</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Pie de Página -->
-    <footer>
-        <p>© 2025 Vortex. Todos los derechos reservados.</p>
-    </footer>
+<footer>
+    <div class="footer-container">
+        <div class="footer-copy">
+            <p>© 2025 Vortex. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-links-legal">
+            <div class="footer-section">
+                <span class="footer-title">WEB</span>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <span class="footer-title">LEGAL</span>
+                <ul>
+                    <li><a href="legal/aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="legal/terminos-condiciones.html">Términos y condiciones</a></li>
+                    <li><a href="legal/politica-cookies.html">Política de cookies</a></li>
+                    <li><a href="legal/politica-privacidad.html">Política de privacidad</a></li>
+                    <li><a href="legal/politica-envio.html">Política de Envío</a></li>
+                    <li><a href="legal/bases-legales.html">Bases Legales</a></li>
+                    <li><a href="legal/politica-devoluciones.html">Política de Devoluciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>

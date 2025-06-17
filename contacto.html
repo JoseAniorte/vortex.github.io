@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Vortex</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar idéntica a la de index.html -->
+    <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">&#9776;</div>
+        <div class="logo">Vortex</div>
+        <a href="#carrito" class="cart-link" id="cart-link">
+            <span class="cart-icon">🛒</span>
+            <span id="cart-count">0</span>
+        </a>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="content-page">
+    <section id="contacto" class="section contact">
+        <h2>Contáctanos</h2>
+        <form id="contact-form" class="contact-form" autocomplete="off">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="nombre" placeholder="Tu nombre" required>
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo" required>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+    </main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-copy">
+            <p>© 2025 Vortex. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-links-legal">
+            <div class="footer-section">
+                <span class="footer-title">WEB</span>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <span class="footer-title">LEGAL</span>
+                <ul>
+                    <li><a href="legal/aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="legal/terminos-condiciones.html">Términos y condiciones</a></li>
+                    <li><a href="legal/politica-cookies.html">Política de cookies</a></li>
+                    <li><a href="legal/politica-privacidad.html">Política de privacidad</a></li>
+                    <li><a href="legal/politica-envio.html">Política de Envío</a></li>
+                    <li><a href="legal/bases-legales.html">Bases Legales</a></li>
+                    <li><a href="legal/politica-devoluciones.html">Política de Devoluciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
