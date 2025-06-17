@@ -201,3 +201,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+    // Cambiar imagen principal
+    function selectImg(img) {
+        document.getElementById('main-product-img').src = img.src;
+        document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+        img.classList.add('active');
+    }
+    // Selección de talla
+    document.querySelectorAll('.size-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+    });
+    // Añadir al carrito
+    document.getElementById('add-to-cart-form').addEventListener('submit', function(e){
+        e.preventDefault();
+        const selectedSize = document.querySelector('.size-btn.selected').dataset.size;
+        // Aquí puedes llamar a tu lógica de carrito (adaptar según tu JS global)
+        alert('Añadido al carrito: BUILD TEE, talla ' + selectedSize);
+    });
+  

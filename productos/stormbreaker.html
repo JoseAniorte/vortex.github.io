@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BUILD TEE - Vortex</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navbar igual que el resto de la web -->
+    <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">&#9776;</div>
+        <div class="logo">Vortex</div>
+        <a href="../index.html#carrito" class="cart-link" id="cart-link">
+            <span class="cart-icon">🛒</span>
+            <span id="cart-count">0</span>
+        </a>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#productos">Productos</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+                <li><a href="../sobre-nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="product-detail-main">
+        <div class="product-detail-gallery">
+            <img id="main-product-img" src="..//img/adidas-alante.png" alt="Vortex Stormbreaker Jacket" class="main-img">
+            <div class="thumbnail-row">
+                <img src="..//img/adidas-alante.png" alt="Frontal" class="thumb active" onclick="selectImg(this)">
+                <img src="..//img/adidas-atras.png" alt="Camiseta" class="thumb" onclick="selectImg(this)">
+                <!-- Más imágenes si quieres -->
+            </div>
+        </div>
+        <div class="product-detail-info">
+            <h1>Vortex Stormbreaker Jacket</h1>
+            <p class="product-price">39,00€</p>
+            <p class="product-desc">Esta impresionante chaqueta Adidas presenta un diseño elegante en negro con un toque moderno, combinando una capa exterior impermeable con mangas interiores en beige para mayor comodidad. Las icónicas tres franjas blancas recorren el pecho y las mangas, añadiendo un estilo deportivo audaz. Equipada con cremallera frontal completa y un cuello alto para mayor protección, esta chaqueta es ideal para climas impredecibles. Perfecta para uso casual o actividades al aire libre, está en excelente estado usado, ofreciendo tanto estilo como funcionalidad.</p>
+            <form id="add-to-cart-form">
+                <label for="talla">Talla:</label>
+                <div class="sizes">
+                    <button type="button" class="size-btn selected" data-size="S">S</button>
+                    <button type="button" class="size-btn" data-size="M">M</button>
+                    <button type="button" class="size-btn" data-size="L">L</button>
+                    <button type="button" class="size-btn" data-size="XL">XL</button>
+                    <button type="button" class="size-btn" data-size="XXL">XXL</button>
+                </div>
+                <div class="envio-text">
+                    <span>🚚 ENVÍOS GRATIS EN PEDIDOS +100€</span>
+                </div>
+                <button type="submit" class="btn btn-large">Añadir a la cesta</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+    <div class="footer-container">
+        <div class="footer-copy">
+            <p>© 2025 Vortex. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-links-legal">
+            <div class="footer-sections-row">
+                <div class="footer-section">
+                    <span class="footer-title">WEB</span>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../index.html#productos">Productos</a></li>
+                        <li><a href="../sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="../contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <span class="footer-title">LEGAL</span>
+                    <ul>
+                        <li><a href="../legal/aviso-legal.html">Aviso legal</a></li>
+                        <li><a href="../legal/terminos-condiciones.html">Términos y condiciones</a></li>
+                        <li><a href="../legal/politica-cookies.html">Política de cookies</a></li>
+                        <li><a href="../legal/politica-privacidad.html">Política de privacidad</a></li>
+                        <li><a href="../legal/politica-envio.html">Política de Envío</a></li>
+                        <li><a href="../legal/bases-legales.html">Bases Legales</a></li>
+                        <li><a href="../legal/politica-devoluciones.html">Política de Devoluciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-pay">
+                <span class="footer-title">Métodos de pago</span>
+                <div class="pagos-icons">
+                    <img src="img/pagos/visa.png" alt="Visa" title="Visa">
+                    <img src="img/pagos/mastercard.png" alt="Mastercard" title="Mastercard">
+                    <img src="img/pagos/paypal.png" alt="PayPal" title="PayPal">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="../script.js"></script>
+</body>
+</html>
