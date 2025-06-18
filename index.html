@@ -12,10 +12,10 @@
      <nav class="navbar">
          <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">&#9776;</div>
          <div class="logo">Vortex</div>
-           <a href="#carrito" class="cart-link" id="cart-link">
-             <span class="cart-icon">🛒</span>
-             <span id="cart-count">0</span>
-          </a>
+           <button class="cart-link" id="cart-link" type="button">
+            <span class="cart-icon">🛒</span>
+            <span id="cart-count">0</span>
+           </button>
          <div class="dropdown-menu" id="dropdown-menu">
          <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -25,6 +25,43 @@
          </ul>
         </div>
      </nav>
+
+     <!-- Carrito Lateral (side cart) -->
+<div id="cart-overlay" class="cart-overlay"></div>
+<aside id="side-cart" class="side-cart">
+    <div class="side-cart-header">
+        <button class="close-cart" id="close-cart" aria-label="Cerrar carrito">✕</button>
+        <span class="cart-title"><span class="cart-icon">🛒</span> CESTA</span>
+    </div>
+    <div class="side-cart-body" id="side-cart-body">
+        <div class="empty-cart">
+            <p>LA CESTA ESTÁ VACÍA</p>
+            <button class="btn-large" id="seguir-comprando">Seguir comprando</button>
+        </div>
+    </div>
+</aside>
+
+<!-- Modal de compra simulada -->
+<div id="checkout-modal" class="checkout-modal">
+  <div class="checkout-modal-content">
+    <span class="checkout-close" id="checkout-close">&times;</span>
+    <h2>Finalizar compra</h2>
+    <form id="checkout-form">
+      <label>Nombre:</label>
+      <input type="text" id="checkout-name" required>
+      <label>Email:</label>
+      <input type="email" id="checkout-email" required>
+      <label>Dirección:</label>
+      <input type="text" id="checkout-address" required>
+      <div id="checkout-summary"></div>
+      <button type="submit" class="btn-large">Confirmar compra</button>
+    </form>
+    <div id="checkout-success" style="display:none;">
+      <h3>¡Compra realizada con éxito!</h3>
+      <p>Gracias por tu pedido :)</p>
+    </div>
+  </div>
+</div>
 
     <!-- Sección de Bienvenida -->
     <section id="inicio" class="hero">
@@ -53,7 +90,7 @@
                 <a href="productos/spiral-drift.html" class="btn-ver-producto">Ver producto</a>
                 <button class="btn add-to-cart">Añadir al Carrito</button>
             </div>
-            <div class="product-card" data-id="3" data-name="Vortex Stormbreaker Jacket" data-price="29.99">
+            <div class="product-card" data-id="3" data-name="Vortex Stormbreaker Jacket" data-price="39.99">
                 <img src="img/adidas-alante.png" alt="Vortex Stormbreaker Jacket - Vortex">
                 <h3>Vortex Stormbreaker Jacket</h3>
                 <p class="price">39,00€</p>
